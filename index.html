@@ -3,34 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Merchant Registration</title>
+    <title>Business Registration</title>
+    <style>
+        /* This section makes the page look good */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f5; /* Light grey background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full height of the screen */
+            margin: 0;
+        }
+
+        /* The white card container */
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Soft shadow */
+            width: 90%; /* Width for mobile */
+            max-width: 400px; /* Maximum width for computer */
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 0;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        /* Styling the input boxes */
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box; /* Keeps padding inside the width */
+            font-size: 16px;
+        }
+
+        /* The green button */
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        p {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
 
-    <h2>Business Registration</h2>
-    
-    <form id="regForm">
+    <div class="form-container">
+        <h2>Business Registration</h2>
         
-        <div>
-            <label for="businessName">Business Name</label><br>
+        <form id="regForm">
+            <label for="businessName">Business Name</label>
             <input type="text" id="businessName" name="businessName" placeholder="e.g. Nairobi Textiles Ltd." required>
-        </div>
-        <br>
 
-        <div>
-            <label for="email">Business Email</label><br>
+            <label for="email">Business Email</label>
             <input type="email" id="email" name="email" placeholder="contact@business.com" required>
-        </div>
-        <br>
 
-        <div>
-            <label for="phone">Phone Number</label><br>
+            <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" placeholder="+254 700 000 000" required>
-        </div>
-        <br>
 
-        <div>
-            <label for="country">Country of Origin</label><br>
+            <label for="country">Country of Origin</label>
             <select id="country" name="country" required>
                 <option value="" disabled selected>Select your country</option>
                 <option value="Kenya">Kenya</option>
@@ -44,30 +103,30 @@
                 <option value="India">India</option>
                 <option value="China">China</option>
             </select>
-        </div>
-        <br>
 
-        <div>
-            <label for="bizType">Business Type</label><br>
+            <label for="bizType">Business Type</label>
             <select id="bizType" name="bizType">
                 <option value="retail">Retail</option>
                 <option value="wholesale">Wholesale</option>
                 <option value="service">Service Provider</option>
                 <option value="manufacturing">Manufacturing</option>
             </select>
-        </div>
-        <br>
 
-        <button type="submit">Register Business</button>
-        
-        <p>By registering, you agree to our Terms of Service.</p>
-    </form>
+            <button type="submit">Register Business</button>
+            
+            <p>By registering, you agree to our Terms of Service.</p>
+        </form>
+    </div>
 
     <script>
         document.getElementById('regForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevents the page from refreshing
+            event.preventDefault(); 
             alert("Business registered successful!");
         });
+    </script>
+
+</body>
+</html>        });
     </script>
 
 </body>
