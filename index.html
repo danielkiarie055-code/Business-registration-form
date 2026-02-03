@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Merchant Registration</title>
+</head>
+<body>
+
+    <h2>Business Registration</h2>
+    
+    <form id="regForm">
+        
+        <div>
+            <label for="businessName">Business Name</label><br>
+            <input type="text" id="businessName" name="businessName" placeholder="e.g. Nairobi Textiles Ltd." required>
+        </div>
+        <br>
+
+        <div>
+            <label for="email">Business Email</label><br>
+            <input type="email" id="email" name="email" placeholder="contact@business.com" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="phone">Phone Number</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="+254 700 000 000" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="country">Country of Origin</label><br>
+            <select id="country" name="country" required>
+                <option value="" disabled selected>Select your country</option>
+                <option value="Kenya">Kenya</option>
+                <option value="Uganda">Uganda</option>
+                <option value="Tanzania">Tanzania</option>
+                <option value="Rwanda">Rwanda</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="South Africa">South Africa</option>
+                <option value="USA">United States</option>
+                <option value="UK">United Kingdom</option>
+                <option value="India">India</option>
+                <option value="China">China</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <label for="bizType">Business Type</label><br>
+            <select id="bizType" name="bizType">
+                <option value="retail">Retail</option>
+                <option value="wholesale">Wholesale</option>
+                <option value="service">Service Provider</option>
+                <option value="manufacturing">Manufacturing</option>
+            </select>
+        </div>
+        <br>
+
+        <button type="submit">Register Business</button>
+        
+        <p>By registering, you agree to our Terms of Service.</p>
+    </form>
+
+    <script>
+        document.getElementById('regForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the page from refreshing
+            alert("Business registered successful!");
+        });
+    </script>
+
+</body>
+</html>
